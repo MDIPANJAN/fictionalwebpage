@@ -1,0 +1,859 @@
+@import "./mixin";
+
+$color-primary:rgb(0, 0, 0);
+$color-secondary:rgb(255, 254, 252);
+$color-font-main:rgb(239, 232, 213);
+$color-light:rgb(79, 82, 86);
+$color-card:rgb(20, 6, 2);
+
+
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+html {
+   
+    //normal size
+  font-size: 62.5%;      
+  
+  @include respond(tab-land){
+    font-size: 50%;
+  }
+  @include respond(small-phone){
+    font-size: 20%;
+  } //460px size
+  
+    //600px size
+  @include respond(phone){         
+    font-size: 20%;               
+  }
+     //900px size
+  @include respond(tab-port){
+    font-size: 40%;
+  } //1200px size
+  
+  
+  // @include respond(big-desktop){
+  //   font-size: 80%;
+  // }
+  
+  }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: .2rem;
+}
+//NAVIGATION//
+
+.topnav{
+    overflow: hidden;
+    background-color: rgba(0, 0, 0,0.01);
+  
+    }
+  .topnav a{
+    float: left;
+    display: block;
+    color:$color-font-main;
+    text-align: center;
+    padding: 6rem  2.8rem;
+     text-decoration: none;
+    font-size: 1rem;
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+  
+  }
+  a.active{
+    font-size: 4rem;
+    padding-top: 4.5rem;
+    padding-left: 4rem;
+  }
+  a:not(:first-child):hover {
+     color: #fcfcfc;
+     padding-bottom: 0;
+     border-bottom: 0.1px solid $color-secondary;
+  }
+  a:last-child:hover {
+    border-bottom: none;
+ }
+  
+    .topnav .icon1 {
+     display: none;
+  }
+
+   @media screen and (max-width: 600px)
+    {
+    .topnav a:not(:first-child){
+        display:none;}
+    .topnav a.icon1{
+     float: right;
+     margin-right: 6rem;
+     display: block;
+    @include respond(small-phone){
+        margin-right: 3rem;
+    }
+    }
+ }
+
+ @media screen and (max-width: 600px){
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon1{
+    position: absolute;
+    // font-size: 3rem;
+    right: 0;
+    top: 0;}
+
+  .topnav.responsive a{
+   float: none;
+   display:block;
+   text-align: center;
+    
+ }
+
+.topnav.responsive a.active{
+text-align: left;
+}
+
+
+
+}
+
+.fa-bars{
+    font-size:3.5rem;
+}
+
+  
+  //HEADER //
+
+.header{
+    height:90vh;
+    background:linear-gradient(to top,rgba(0, 0, 0, 0.74),rgba(0, 0, 0, 0.726)),url(../img/hero.jpg);
+    //  background-image:radial-gradient(circle,rgba(0, 0, 0,0.5), rgba(0, 0, 255, 0.075));
+    background-size: cover;
+    background-position:top;
+    position: relative;
+}
+
+.header__text-box{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform:translate(-50%, -40%);
+    text-align:center;
+}
+
+.heading-primary--main{
+    display: block;
+    text-align: center;
+    font-size:3rem;
+    font-weight:400;
+    letter-spacing:.5rem;
+    font-family:'Dancing Script', cursive;
+    color: $color-font-main;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    animation: moveInLeft 2s ease-out;
+}
+
+.heading-primary--sub{
+    display: block;
+    font-size:4rem;
+    font-weight:400;
+    letter-spacing:.7rem;
+    text-transform: uppercase;
+    font-family:'Fjalla One', sans-serif;
+    color: $color-font-main;
+    // animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-6rem); }
+    80% {
+      transform: translateX(1rem); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }
+  
+
+// @keyframes moveInRight {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(4rem); }
+//     80% {
+//         transform: translateX(-1rem); }
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0); } }
+        
+
+.btn{
+    font-size: 1rem;
+    padding: 1rem 5rem;
+    display:inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:$color-font-main;
+    color: $color-light;
+    border-radius:10rem;
+    // position: relative;
+    // overflow: hidden;
+    transform: translateX(-9rem);   // NEED media query to remove this after 680px to make the button centered
+@include respond(small-phone){
+    
+    transform: translateX(0rem);
+}
+    
+}
+.btn:focus{
+    outline: none;
+}
+// .btn_visible{
+//     display:inline-block;
+//     height:100%;
+    
+// }
+// .btn_invisible{
+//     display:inline-block;
+//     transform: translateX(5rem);
+//     position: absolute;
+//     top:-100%;
+//     left:0;
+//     height: 100%;
+//     transition: all .2s;
+// }
+// .btn:hover .visible{
+//     transform:translateY(5rem);
+// }
+
+// .btn:hover .btn_invisible{
+//     top: 0;
+    
+// }
+
+
+.icon{
+    fill:white;
+    display:inline-block;
+    height:6rem;
+    width:2.5rem;
+    margin-left:17rem;
+    transform: translateX(2rem);
+    margin-bottom:7rem;
+@include respond(small-phone){
+    display: block;
+    transform: translateX(0rem);
+}
+}
+.icon-black{
+    height:2rem;
+    width:2.5rem;
+    margin-bottom: 4rem;   
+}
+
+.services{
+    height: 110vh;
+    background-color: $color-secondary;
+@include respond(phone){
+    height: 95vh;
+}
+   
+}
+.store{
+    display:flex;
+    height:50vh;
+    justify-content: center;
+    text-align: center;
+    // position: relative;
+    
+    
+}
+.photo1{
+    width: 50%;
+    height: 100%;
+    margin: 7rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+@include respond(phone){         
+    width: 65%; 
+    top: 96%;   
+}
+}
+
+.our{
+    background-color:$color-card;
+    height: 52%;
+    width:20%;
+    position: absolute;
+    top: 100%;
+    left:40%;
+    text-align: center;
+@include respond(phone){         
+    left: 36%;
+    top: 96%;   
+    width: 27%;
+
+}
+}
+.our:hover{
+    transform: translateX(1rem);
+    
+}
+
+.shape{
+    width:8rem;
+    height:8rem;
+    background-color: white;
+    shape-outside:circle(38% at 50% 50%);
+    clip-path: circle(38% at 50% 50%);
+    display:inline-block;
+
+
+}
+.profile{
+    height:100%;
+    
+    
+}
+.discover{
+    display:block;
+    text-align: center;
+    font-size:2rem;
+    color: $color-font-main;
+    font-family:'Dancing Script', cursive;
+    margin-top: 5rem;
+    @include respond(phone){
+        margin-top: 14rem;
+    }
+}
+.our-store{
+    display:block;
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: $color-font-main;
+    padding-bottom: 2rem;
+}
+.paragraph{
+    display: block;
+    text-align:center;
+    padding-bottom: 2rem;
+    color: $color-font-main;
+    padding: 1rem 2rem;
+}
+.para{
+  text-transform: uppercase;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.items{
+    height:10rem;
+    width:10rem;
+    display: inline;
+    margin-right: 4rem;
+    shape-outside:circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    animation: moveInTop 1s ease-out;
+
+}
+
+@keyframes moveInTop{
+    0% {
+      opacity: 0;
+      transform: translateY(6rem); }
+    // 80% {
+    //   transform: translateY(1rem); }
+    100% {
+      opacity: 1;
+      transform: translateY(0); } }
+
+// .caption{
+// position: absolute;
+// top:50%;
+// left: 30%;
+// color: black;
+// font-size: 2rem;
+// transform: translate(-50% -30%);
+// text-align: center;
+// } 
+// .cap2{
+//     position: absolute;
+//     top:50%;
+//     left:40.5%;  
+// }
+// .cap3{
+//     position: absolute;
+//     top:50%;
+//     left:50.5%;  
+// }
+// .cap4{
+//     position: absolute;
+//     top:50%;
+//     left:61.5%;  
+// }
+// .food:hover{
+//     filter: blur(2px) brightness(80%);
+    
+// }
+
+// .caption &.food:hover{
+//     filter: blur(2px) brightness(80%);
+// }
+// .caption:hover{
+//    transform:translateY(-2rem);
+//    backface-visibility:hidden;
+// }
+
+.discover-services{
+    display:block;
+    text-align: center;
+    font-size:2rem;
+    color: black;
+    font-family:'Dancing Script', cursive;
+    margin-top:5rem;
+}
+.our-services{
+    display:block;
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color:black;
+    padding-bottom:4rem;
+     
+}
+.new{
+   padding-top:8rem;
+   padding-bottom: 10rem;
+}
+.food{
+    height: 100%;
+    width: 100%;
+}
+
+//BOOKING SECTION
+
+.booking{
+    height:85vh;
+    background:url(../img/booking.jpg);
+    background-size:cover;
+    background-position: center;  
+    display:flex;
+    justify-content:center;
+}
+
+.booking-form{
+    display:flex;
+    background-color: $color-secondary;
+    height: 60vh;
+    width:55vw;
+    margin-top:8rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+@include respond(phone){
+    width: 63vw;
+}
+}
+.form{
+    flex-grow: 1;
+    text-align: center;
+
+&__group{
+    display:block;
+    text-align:center;
+    
+}
+&__submit{
+    display:inline-block;
+    padding: 0.8rem 2rem;
+    border-radius:100px;
+    border:none;
+    margin-top:4rem;
+    text-transform: uppercase;
+    font-size:1rem;
+    font-weight:400;
+    background-color: black;
+    color:aliceblue;
+}
+}
+.form-input{
+    width: 60%;
+    height:5%;
+    border: none;
+    border-bottom: 1px solid $color-light;
+    margin-bottom: 2rem;
+
+}
+.time-card{
+    height:100%;
+    width:35%;
+    border:0.01rem dashed white;
+    background-color:$color-card;
+&:hover{
+    transform: translateX(-1rem);
+}
+}
+.timing1,.timing2{
+    color:$color-font-main;
+    text-align: center;
+    list-style-type: none;
+    font-size:1.1rem;
+    letter-spacing:0.1rem;
+    padding: 1.2rem;
+
+}
+li{
+    padding-bottom: 0.5rem;
+}
+.head1,.head2{
+    margin-bottom: 0.5rem;
+}
+
+.open{
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem;
+    color:$color-font-main;
+    margin-top:20%;
+    
+&__main{
+    font-family:'Dancing Script',cursive;
+    display:block;
+    text-align:center;
+@include respond(small-phone){
+    padding-top: 16rem;
+
+}
+}
+&__sub{
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    display: block;
+    text-align:center;
+}
+}
+
+.reserve{
+    font-size:3rem;
+    color:black;
+&__main{
+    font-family:'Dancing Script',cursive;
+    display: block;
+    text-align: center;
+    padding-top:6rem;
+    @include respond(small-phone){
+        padding-top: 16rem;
+        
+        }  
+}
+&__sub{
+    font-family:'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+}
+
+//EVENT SECTION
+.title{
+    padding-top: 6rem;
+&__main{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+&__sub{
+     display:block;
+    font-weight:500;
+     text-align: center;
+     font-size: 2rem;
+     font-family: 'Fjalla One', sans-serif;
+     text-transform:uppercase;
+     color: black;
+    
+} 
+}
+.event{
+    background-color:$color-secondary;
+    height:140vh;
+}
+.event-main{
+    display: flex;
+    height:40rem;
+    justify-content: center;
+}
+.event-box{
+    width:56%;
+    height:65%;
+    // background-color:aqua;
+    margin-top: 4rem;
+    display:flex;
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    @include respond (small-phone){
+        width: 64%;
+
+
+    }   
+}
+.event1{
+    // background-color: blue;
+    height:100%;
+    width:60%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    
+
+&__party-pic{
+   background-color:brown; 
+   height: 40%;
+   width: 30%;
+   flex-grow: s
+   
+}
+&__party-text{
+    // background-color: yellow;
+    height: 40%;
+    width: 65%;
+
+}
+}
+.party-image{
+    height:100%;
+    width: 100%;
+
+ }
+ .party-text-main{
+     font-size: 1.5rem;
+     font-weight:400;
+     font-family:'Fjalla One', sans-serif;
+    //  text-align: center;
+     display: block;
+     padding:1rem 0;
+     letter-spacing:0.1rem;
+     color: $color-light;
+ }
+
+ .party-text-sub{
+    font-size: 1rem; 
+    font-family:'Fjalla One', sans-serif;
+    display:block;
+    // text-align:center;
+    letter-spacing:0.1rem;
+    color: $color-light;
+ }
+
+
+
+
+.event2{
+    height:100%;
+    width: 40%;
+    display:flex;
+    // background-color:greenyellow;
+    // flex-grow: 1;
+    flex-wrap:wrap;
+ &__image{
+     height:90%;
+     width:100%;
+    
+ }  
+}
+/////////GALLERY////////
+.gallery-main{
+    display:block;
+    text-align: center;
+    font-size:2rem;
+    color: black;
+    font-family:'Dancing Script', cursive;
+    margin-top:-2rem;   
+}
+.gallery-sub{
+    display:block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-size:2rem;
+    color: black;
+    font-family:'Fjalla One', sans-serif;
+    margin-top:1rem; 
+    margin-bottom: 5rem;  
+}
+ .gallery{
+      display:flex;
+    //   flex-wrap: wrap;  
+ &__item{
+
+    margin-top:-2rem; 
+ }
+ &__photo{
+    //  display: block;
+     width: 100%;
+     height:90%;
+     padding:1rem;
+    
+     }
+ 
+ }
+
+.pic1,
+.pic5
+{  
+    padding-left:0;
+}
+.pic4,
+.pic8{
+    padding-right:0; 
+}
+
+.chef-box{
+    display: flex;
+    // background-color:yellowgreen;
+    height:30rem; 
+&__new{
+//    background-color: yellow;
+//    width:50%;
+}    
+    
+ &__lady{
+     //  background-color: red;
+      height:100%;
+      width: 80%;
+      padding-left: 25%;
+   }
+&__quote{
+    // background-color: aqua;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+// &__new{
+//     height:100%; 
+//     width:100%;
+// }
+}
+.quote-box{
+    // background-color:red;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: 49%;
+    width: 70%;
+    background-color: azure;
+    transform: translateX(-30%);
+&__text{
+    text-align: center;
+    font-size: 1rem;
+    font-family:'Fjalla One', sans-serif;
+    padding: 3rem 1rem;
+
+}
+&__name{
+    text-align:center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-family:'Fjalla One', sans-serif;
+}
+@include respond(small-phone){
+    width: 124%;
+}
+}
+.name{
+    display: inline-block;
+}
+    hr{
+        width:50%;
+        display: block;
+        margin-left: 12rem;
+    }
+
+//FOOTER//
+.footer{
+    height:65vh;
+    background-color: black;
+
+&__map{
+    // background-color:red;
+    height: 50vh;
+    background:linear-gradient(to top ,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 8)),url(../img/footer_map.png);
+    background-position: center;
+    background-size: cover;
+}
+&__last{
+   display: flex;
+   background-color:rgb(74, 78, 84);
+   
+   height:20vh;
+}
+
+&__last-left{
+    background-color:rgb(23, 25, 28);
+    width: 50%;
+}
+&__last-right{
+    background-color: rgb(15, 12, 9);
+    width:50%;
+    text-align: center;
+    display: flex;
+    
+}
+}
+
+.footer-main{
+    font-size: 2rem;
+    color: $color-secondary;
+    text-align: center;
+    display: block;
+    padding: 3rem 1rem 0 0;
+}
+ .follow{
+    font-size:1.5rem;
+    font-family:'Fjalla One', sans-serif;
+    padding: 4rem 3rem;
+    color: $color-secondary;
+   
+ }
+ .footer-sub{
+     display: block;
+     color: $color-secondary;
+     text-align: center;
+     font-size: 1rem;
+     padding: 0 10rem;
+ }
+.icon3{
+    fill:$color-secondary;
+    display:inline-block;
+    height:2rem;
+    width:2.5rem;
+    margin: 3.9rem 1rem;
+    }
+.icon3:hover{
+  color: aqua;
+    }
+
+    [data-scroll]{
+        transition: all 2s;
+    }
+
+    [data-scroll="in"]{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    [data-scroll="out"]{
+        opacity: 0;
+        transform: translateX(-18rem);
+    }

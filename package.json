@@ -1,0 +1,20 @@
+{
+  "name": "restro",
+  "version": "1.0.0",
+  "description": "Restro website",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w",
+    "deploy":"gh-pages -d dist"
+  },
+  "author": "MDIPANJAN",
+  "license": "ISC",
+  "homepage":"https://mdipanjan.github.io/fictionalwebpage",
+  "devDependencies": {
+    "node-sass": "^4.9.4"
+  },
+
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

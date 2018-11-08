@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+        
+
+    <header class="header" id="home">
+            
+        
+                <nav class="topnav" id="myButton">
+                        <a href="#home" class="active"><i class="fab fa-app-store-ios"></i></a> 
+                        <a href="#home">Home</a>
+                        <a href="#services">services</a>
+                        <a href="#events">Events</a>
+                        <a href="#contacts">Contact</a>
+                     <a href="javascript:void(0);" class="icon1" onclick="hamburger()"><i class="fa fa-bars"></i></a> 
+                </nav>
+        
+        <div class="header__text-box">
+            <h1 data-scroll class="heading-primary">
+                <span class="heading-primary--main">Welcome to</span>
+                <span class="heading-primary--sub">The metro diner</span>
+            </h1>
+                <svg class="icon">
+                    <use xlink:href="img/sprite.svg#restaurant"></use>
+                </svg>
+                <button class="btn">
+                  <span class="btn_visible">Get started</span>
+                  <!-- <span class="btn_invisible">Book now</span> -->
+                </button>
+                <!-- <a href="#" class="btn btn-white">Get started</a> -->
+        </div>
+        
+    </header>
+    <main>
+        <section class="services" id="services">
+            <div class="store">
+            <img src="./img/diner.jpg" alt="" class="photo1">   
+            </div>
+            <div class="our">
+                <h1 class="card">
+                    <span  class="discover">Discover</span>
+                    <span  class="our-store">our store</span>
+                </h1>
+                <p class="paragraph"> Lorem ipsum dolor sit, amet consectetur adipisicing Mollitia unde aliquam totam eaque corporis iure </p>
+                <figure class="shape">
+                    <img src="./img/chef.png" alt="Chef" class="profile">
+                    
+                </figure>
+                <p class="paragraph para">John Doe</p>
+            </div>
+            <div class="new">
+                    <h1 class="new-card">
+                        <span data-scroll class="discover-services">Discover</span>
+                        <span data-scroll class="our-services">our services</span>
+                    </h1>
+                    <div class="menu">
+
+                        <figure class="items"><img src="./img/breakfast.jpg" alt="" class="food"></figure>
+                        
+                        <!-- <figcaption class="caption cap1">BINGO</figcaption> -->
+                        <figure class="items"><img src="./img/lunch.jpg" alt="" class="food"></figure>
+
+                        <!-- <figcaption class="caption cap2">RINGO</figcaption> -->
+
+                        <figure class="items"><img src="./img/dinner.jpg" alt="" class="food"></figure>
+                        <!-- <figcaption class="caption cap3">RINGO</figcaption> -->
+
+                        <figure class="items"><img src="./img/drinks.jpg" alt="" class="food"></figure>
+                        <!-- <figcaption class="caption cap4">RINGO</figcaption> -->
+
+                    </div>
+            </div>
+       
+
+        </section>
+         
+        <section class="booking">
+            <div class="booking-form">
+                <div class="time-card">
+                    <p class="open">
+                        <span class="open__main">Time</span>
+                        <span class="open__sub">open</span>
+                    </p>
+                    <ul class="timing1">
+                        <li class="head1">MONDAY-FRIDAY</li>
+                        <li>7AM - 10AM</li>
+                        <li>7AM - 10AM</li>
+                    </ul>
+                    <ul class="timing2">
+                        <li class="head2">SATURDAY-SUNDAY</li>
+                        <li>7AM - 10AM</li>
+                        <li>7AM - 10AM</li>
+                    </ul>
+                </div>
+                <form action="#" class="form">
+                        <p class="reserve">
+                            <span class="reserve__main">Reservation</span>
+                            <span class="reserve__sub">Online booking</span>
+                        </p>
+                        <svg class="icon-black">
+                            <use xlink:href="img/sprite.svg#restaurant"></use>
+                        </svg>
+                    <div class="form__group">
+                        <input type="text" class="form-input" placeholder="name" id="name" required>
+                        <label for="name"></label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form-input" placeholder="email" id="name" required>
+                        <label for="name"></label>
+                        
+                    </div>
+
+                        <button class="form__submit">Book Now</button>
+                    
+                </form>
+                
+            </div>
+        </section>
+        <section class="event" id="events" >
+                <p class="title">
+                    <span data-scroll class="title__main">Upcoming</span>
+                    <span data-scroll class="title__sub">OUr event</span>
+                </p>
+                <div class="event-main">
+                    <div class="event-box">
+                        
+                        <div class="event1">
+                            <div class="event1__party-pic">
+                                <img src="./img/party1.jpg" alt="party" class="party-image">  
+                            </div>
+                           
+                            <p class="event1__party-text">
+                                <span class="party-text-main">DJ Dougal and Gammer.</span>
+                                <span class="party-text-sub">Party themes- A list of some of the more fun party </span>
+                            </p>
+
+                            <div class="event1__party-pic">
+                                <img src="./img/party2.jpg" alt="party" class="party-image">  
+                            </div>
+                           
+                            <p class="event1__party-text">
+                                <span class="party-text-main">Deadmau5</span>
+                                <span class="party-text-sub">Party themes- A list of some of the more fun party </span>
+                            </p>
+                        </div>
+                        <div class="event2">
+                             <div class="event2-box">
+                                   <img src="./img/party2.jpg" alt="party" class="event2__image">  
+                             </div>  
+                        </div>
+                            
+                    </div> 
+                   
+                </div>
+                <p data-scroll class="gallery-main">Discover</p> 
+                <p data-scroll class="gallery-sub">our gallery</p> 
+                 <div class="gallery">
+                        <figure class="gallery__item">
+                             <img src="./img/photo4.jpg" alt="" class="gallery__photo pic1">
+                        </figure>
+                        <figure class="gallery__item">
+                             <img src="./img/photo4.jpg" alt="" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                             <img src="./img/photo3.jpg" alt="" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                             <img src="./img/photo4.jpg" alt="" class="gallery__photo pic4">
+                        </figure>
+                        
+                </div> 
+                <div class="gallery">
+                    <figure class="gallery__item">
+                         <img src="./img/photo4.jpg" alt="" class="gallery__photo pic5">
+                    </figure>
+                    <figure class="gallery__item">
+                         <img src="./img/photo4.jpg" alt="" class="gallery__photo">
+                    </figure>
+                    <figure class="gallery__item">
+                         <img src="./img/photo3.jpg" alt="" class="gallery__photo">
+                    </figure>
+                    <figure class="gallery__item">
+                         <img src="./img/photo4.jpg" alt="" class="gallery__photo pic8">
+                    </figure>
+                    
+            </div> 
+           <div class="chef-box">
+                 <div class="chef-box__new">
+                    <img src="./img/chef-lady.png" alt="Chef-lady" class="chef-box__lady">
+                 </div>
+                    
+               
+                <div class="chef-box__quote">
+                    <div class="quote-box">
+                        <p class="quote-box__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum fugit vero expedita nam sint, ipsa laudantium aperiam dolor quibusdam, commodi nihil, rem repellat error neque velit </p>
+                        <hr>
+                        <div class="quote-box__name">
+                            <p class="name">Brandon Sanderson</p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div> 
+            <div class="footer" id="contacts">
+              <div class="footer__map">
+                ff
+              </div> 
+              <div class="footer__last">
+                  <div class="footer__last-left">
+                    <span class="footer-main">Metro diner</span>
+                    <span class="footer-sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iusto qui amet consectetur adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </span>
+                  </div>
+                  <div class="footer__last-right">
+                      <p class="follow">Follow us</p>
+                      <div class="social">
+                         
+                            <svg class="icon3">
+                                <use xlink:href="img/sprite.svg#facebook-logo-button"></use>
+                            </svg>
+                         
+                         
+                            <svg class="icon3">
+                                <use xlink:href="img/sprite.svg#twitter-logo-button"></use>
+                            </svg>
+                         
+                            <svg class="icon3">
+                                <use xlink:href="img/sprite.svg#instagram"></use>
+                            </svg>
+                          
+                        </div>
+                        <!-- <div>
+                            <p class="newsletter">Newsletter</p>
+                            <input type="text" class="form_newsletter" placeholder="email" id="name" >
+                        </div> -->
+                  </div>
+              </div>    
+            </div>
+        </section>
+        
+    </main>
+   <script>
+       ScrollOut({
+           once:true
+       });
+   </script>
+</body>
+</html>
