@@ -1,0 +1,612 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 76em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 20%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 20%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: .2rem; }
+
+.topnav {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.01); }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #efe8d5;
+  text-align: center;
+  padding: 6rem  2.8rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase; }
+
+a.active {
+  font-size: 4rem;
+  padding-top: 4.5rem;
+  padding-left: 4rem; }
+
+a:not(:first-child):hover {
+  color: #fcfcfc;
+  padding-bottom: 0;
+  border-bottom: 0.1px solid #fffefc; }
+
+a:last-child:hover {
+  border-bottom: none; }
+
+.topnav .icon1 {
+  display: none; }
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none; }
+  .topnav a.icon1 {
+    float: right;
+    margin-right: 6rem;
+    display: block; } }
+  @media screen and (max-width: 600px) and (max-width: 28.75em) {
+    .topnav a.icon1 {
+      margin-right: 3rem; } }
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative; }
+  .topnav.responsive .icon1 {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center; }
+  .topnav.responsive a.active {
+    text-align: left; } }
+
+.fa-bars {
+  font-size: 3.5rem; }
+
+.header {
+  height: 90vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.726)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -40%);
+  text-align: center; }
+
+.heading-primary--main {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: .5rem;
+  font-family: 'Dancing Script', cursive;
+  color: #efe8d5;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  animation: moveInLeft 2s ease-out; }
+
+.heading-primary--sub {
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: .7rem;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  color: #efe8d5; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.btn {
+  font-size: 1rem;
+  padding: 1rem 5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #efe8d5;
+  color: #4f5256;
+  border-radius: 10rem;
+  transform: translateX(-9rem); }
+  @media (max-width: 28.75em) {
+    .btn {
+      transform: translateX(0rem); } }
+
+.btn:focus {
+  outline: none; }
+
+.icon {
+  fill: white;
+  display: inline-block;
+  height: 6rem;
+  width: 2.5rem;
+  margin-left: 17rem;
+  transform: translateX(2rem);
+  margin-bottom: 7rem; }
+  @media (max-width: 28.75em) {
+    .icon {
+      display: block;
+      transform: translateX(0rem); } }
+
+.icon-black {
+  height: 2rem;
+  width: 2.5rem;
+  margin-bottom: 4rem; }
+
+.services {
+  height: 110vh;
+  background-color: #fffefc; }
+  @media (max-width: 37.5em) {
+    .services {
+      height: 95vh; } }
+
+.store {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  text-align: center; }
+
+.photo1 {
+  width: 50%;
+  height: 100%;
+  margin: 7rem 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  @media (max-width: 37.5em) {
+    .photo1 {
+      width: 65%;
+      top: 96%; } }
+
+.our {
+  background-color: #140602;
+  height: 52%;
+  width: 20%;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .our {
+      left: 36%;
+      top: 96%;
+      width: 27%; } }
+
+.our:hover {
+  transform: translateX(1rem); }
+
+.shape {
+  width: 8rem;
+  height: 8rem;
+  background-color: white;
+  shape-outside: circle(38% at 50% 50%);
+  clip-path: circle(38% at 50% 50%);
+  display: inline-block; }
+
+.profile {
+  height: 100%; }
+
+.discover {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: #efe8d5;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 5rem; }
+  @media (max-width: 37.5em) {
+    .discover {
+      margin-top: 14rem; } }
+
+.our-store {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  color: #efe8d5;
+  padding-bottom: 2rem; }
+
+.paragraph {
+  display: block;
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #efe8d5;
+  padding: 1rem 2rem; }
+
+.para {
+  text-transform: uppercase; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+
+.items {
+  height: 10rem;
+  width: 10rem;
+  display: inline;
+  margin-right: 4rem;
+  shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  animation: moveInTop 1s ease-out; }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.discover-services {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 5rem; }
+
+.our-services {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  padding-bottom: 4rem; }
+
+.new {
+  padding-top: 8rem;
+  padding-bottom: 10rem; }
+
+.food {
+  height: 100%;
+  width: 100%; }
+
+.booking {
+  height: 85vh;
+  background: url(../img/booking.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; }
+
+.booking-form {
+  display: flex;
+  background-color: #fffefc;
+  height: 60vh;
+  width: 55vw;
+  margin-top: 8rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  @media (max-width: 37.5em) {
+    .booking-form {
+      width: 63vw; } }
+
+.form {
+  flex-grow: 1;
+  text-align: center; }
+  .form__group {
+    display: block;
+    text-align: center; }
+  .form__submit {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    border: none;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: black;
+    color: aliceblue; }
+
+.form-input {
+  width: 60%;
+  height: 5%;
+  border: none;
+  border-bottom: 1px solid #4f5256;
+  margin-bottom: 2rem; }
+
+.time-card {
+  height: 100%;
+  width: 35%;
+  border: 0.01rem dashed white;
+  background-color: #140602; }
+  .time-card:hover {
+    transform: translateX(-1rem); }
+
+.timing1, .timing2 {
+  color: #efe8d5;
+  text-align: center;
+  list-style-type: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem; }
+
+li {
+  padding-bottom: 0.5rem; }
+
+.head1, .head2 {
+  margin-bottom: 0.5rem; }
+
+.open {
+  font-size: 2.8rem;
+  letter-spacing: 0.3rem;
+  color: #efe8d5;
+  margin-top: 20%; }
+  .open__main {
+    font-family: 'Dancing Script',cursive;
+    display: block;
+    text-align: center; }
+    @media (max-width: 28.75em) {
+      .open__main {
+        padding-top: 16rem; } }
+  .open__sub {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: center; }
+
+.reserve {
+  font-size: 3rem;
+  color: black; }
+  .reserve__main {
+    font-family: 'Dancing Script',cursive;
+    display: block;
+    text-align: center;
+    padding-top: 6rem; }
+    @media (max-width: 28.75em) {
+      .reserve__main {
+        padding-top: 16rem; } }
+  .reserve__sub {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: center; }
+
+.title {
+  padding-top: 6rem; }
+  .title__main {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    font-family: 'Dancing Script', cursive; }
+  .title__sub {
+    display: block;
+    font-weight: 500;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: black; }
+
+.event {
+  background-color: #fffefc;
+  height: 140vh; }
+
+.event-main {
+  display: flex;
+  height: 40rem;
+  justify-content: center; }
+
+.event-box {
+  width: 56%;
+  height: 65%;
+  margin-top: 4rem;
+  display: flex; }
+  @media (max-width: 28.75em) {
+    .event-box {
+      width: 64%; } }
+
+.event1 {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .event1__party-pic {
+    background-color: brown;
+    height: 40%;
+    width: 30%;
+    flex-grow: s; }
+  .event1__party-text {
+    height: 40%;
+    width: 65%; }
+
+.party-image {
+  height: 100%;
+  width: 100%; }
+
+.party-text-main {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Fjalla One', sans-serif;
+  display: block;
+  padding: 1rem 0;
+  letter-spacing: 0.1rem;
+  color: #4f5256; }
+
+.party-text-sub {
+  font-size: 1rem;
+  font-family: 'Fjalla One', sans-serif;
+  display: block;
+  letter-spacing: 0.1rem;
+  color: #4f5256; }
+
+.event2 {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap; }
+  .event2__image {
+    height: 90%;
+    width: 100%; }
+
+.gallery-main {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  font-family: 'Dancing Script', cursive;
+  margin-top: -2rem; }
+
+.gallery-sub {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  color: black;
+  font-family: 'Fjalla One', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 5rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__item {
+    margin-top: -2rem; }
+  .gallery__photo {
+    width: 100%;
+    height: 90%;
+    padding: 1rem; }
+
+.pic1,
+.pic5 {
+  padding-left: 0; }
+
+.pic4,
+.pic8 {
+  padding-right: 0; }
+
+.chef-box {
+  display: flex;
+  height: 30rem; }
+  .chef-box__lady {
+    height: 100%;
+    width: 80%;
+    padding-left: 25%; }
+  .chef-box__quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.quote-box {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: 49%;
+  width: 70%;
+  background-color: azure;
+  transform: translateX(-30%); }
+  .quote-box__text {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 3rem 1rem; }
+  .quote-box__name {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-family: 'Fjalla One', sans-serif; }
+  @media (max-width: 28.75em) {
+    .quote-box {
+      width: 124%; } }
+
+.name {
+  display: inline-block; }
+
+hr {
+  width: 50%;
+  display: block;
+  margin-left: 12rem; }
+
+.footer {
+  height: 65vh;
+  background-color: black; }
+  .footer__map {
+    height: 50vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), black), url(../img/footer_map.png);
+    background-position: center;
+    background-size: cover; }
+  .footer__last {
+    display: flex;
+    background-color: #4a4e54;
+    height: 20vh; }
+  .footer__last-left {
+    background-color: #17191c;
+    width: 50%; }
+  .footer__last-right {
+    background-color: #0f0c09;
+    width: 50%;
+    text-align: center;
+    display: flex; }
+
+.footer-main {
+  font-size: 2rem;
+  color: #fffefc;
+  text-align: center;
+  display: block;
+  padding: 3rem 1rem 0 0; }
+
+.follow {
+  font-size: 1.5rem;
+  font-family: 'Fjalla One', sans-serif;
+  padding: 4rem 3rem;
+  color: #fffefc; }
+
+.footer-sub {
+  display: block;
+  color: #fffefc;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 10rem; }
+
+.icon3 {
+  fill: #fffefc;
+  display: inline-block;
+  height: 2rem;
+  width: 2.5rem;
+  margin: 3.9rem 1rem; }
+
+.icon3:hover {
+  color: aqua; }
+
+[data-scroll] {
+  transition: all 2s; }
+
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0); }
+
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-18rem); }
