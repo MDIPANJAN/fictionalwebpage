@@ -248,6 +248,7 @@ text-align: left;
     margin-bottom:7rem;
 @include respond(small-phone){
     display: block;
+    margin-left: 15rem;
     transform: translateX(0rem);
 }
 }
